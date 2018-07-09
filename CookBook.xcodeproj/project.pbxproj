@@ -18,13 +18,9 @@
 		BA9C895220DED48000DA4268 /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BA9C895020DED48000DA4268 /* MainInterface.storyboard */; };
 		BA9C895620DED48000DA4268 /* CookBookIntentUI.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = BA9C894920DED48000DA4268 /* CookBookIntentUI.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		BA9C895920DED48000DA4268 /* CookBookIntent.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = BA9C894020DED47F00DA4268 /* CookBookIntent.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
-		BABD5F3820F22305001E288F /* CookBook.entitlements in Resources */ = {isa = PBXBuildFile; fileRef = BABD5F3720F22305001E288F /* CookBook.entitlements */; };
-		BABD5F3C20F2259D001E288F /* Recipe.swift in Sources */ = {isa = PBXBuildFile; fileRef = BABD5F3B20F2259D001E288F /* Recipe.swift */; };
 		BABD5F3E20F22F48001E288F /* Intents.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = BABD5F3D20F22F48001E288F /* Intents.intentdefinition */; };
 		BABD5F3F20F22F5E001E288F /* Intents.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = BABD5F3D20F22F48001E288F /* Intents.intentdefinition */; };
 		BABD5F4020F22F5F001E288F /* Intents.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = BABD5F3D20F22F48001E288F /* Intents.intentdefinition */; };
-		BABD5F4520F23098001E288F /* Recipe.swift in Sources */ = {isa = PBXBuildFile; fileRef = BABD5F3B20F2259D001E288F /* Recipe.swift */; };
-		BABD5F4620F23098001E288F /* Recipe.swift in Sources */ = {isa = PBXBuildFile; fileRef = BABD5F3B20F2259D001E288F /* Recipe.swift */; };
 		BABD5F4A20F23680001E288F /* CookBookIntentHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = BABD5F4920F23680001E288F /* CookBookIntentHandler.swift */; };
 		BABD5F4B20F237A0001E288F /* CookBookIntentHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = BABD5F4920F23680001E288F /* CookBookIntentHandler.swift */; };
 		BABD5F4C20F237A1001E288F /* CookBookIntentHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = BABD5F4920F23680001E288F /* CookBookIntentHandler.swift */; };
@@ -81,8 +77,6 @@
 		BA9C894E20DED48000DA4268 /* IntentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntentViewController.swift; sourceTree = "<group>"; };
 		BA9C895120DED48000DA4268 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/MainInterface.storyboard; sourceTree = "<group>"; };
 		BA9C895320DED48000DA4268 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		BABD5F3720F22305001E288F /* CookBook.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = CookBook.entitlements; sourceTree = "<group>"; };
-		BABD5F3B20F2259D001E288F /* Recipe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Recipe.swift; sourceTree = "<group>"; };
 		BABD5F3D20F22F48001E288F /* Intents.intentdefinition */ = {isa = PBXFileReference; lastKnownFileType = file.intentdefinition; path = Intents.intentdefinition; sourceTree = "<group>"; };
 		BABD5F4920F23680001E288F /* CookBookIntentHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CookBookIntentHandler.swift; sourceTree = "<group>"; };
 		BABD5F4D20F23E65001E288F /* VoiceShortcutManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VoiceShortcutManager.swift; sourceTree = "<group>"; };
@@ -145,8 +139,6 @@
 				BA9C891520DED40900DA4268 /* Assets.xcassets */,
 				BA9C891720DED40900DA4268 /* LaunchScreen.storyboard */,
 				BA9C891A20DED40900DA4268 /* Info.plist */,
-				BABD5F3720F22305001E288F /* CookBook.entitlements */,
-				BABD5F3B20F2259D001E288F /* Recipe.swift */,
 				BABD5F3D20F22F48001E288F /* Intents.intentdefinition */,
 				BABD5F4920F23680001E288F /* CookBookIntentHandler.swift */,
 				BABD5F4D20F23E65001E288F /* VoiceShortcutManager.swift */,
@@ -287,7 +279,6 @@
 			files = (
 				BA9C891920DED40900DA4268 /* LaunchScreen.storyboard in Resources */,
 				BA9C891620DED40900DA4268 /* Assets.xcassets in Resources */,
-				BABD5F3820F22305001E288F /* CookBook.entitlements in Resources */,
 				BA9C891420DED40700DA4268 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -320,7 +311,6 @@
 				BABD5F4E20F23E65001E288F /* VoiceShortcutManager.swift in Sources */,
 				BA9C891120DED40700DA4268 /* ViewController.swift in Sources */,
 				BA9C890F20DED40700DA4268 /* AppDelegate.swift in Sources */,
-				BABD5F3C20F2259D001E288F /* Recipe.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -331,7 +321,6 @@
 				BABD5F3F20F22F5E001E288F /* Intents.intentdefinition in Sources */,
 				BABD5F4C20F237A1001E288F /* CookBookIntentHandler.swift in Sources */,
 				BA9C894320DED47F00DA4268 /* IntentHandler.swift in Sources */,
-				BABD5F4520F23098001E288F /* Recipe.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -343,7 +332,6 @@
 				BABD5F4B20F237A0001E288F /* CookBookIntentHandler.swift in Sources */,
 				BA9C894F20DED48000DA4268 /* IntentViewController.swift in Sources */,
 				BABD5F5120F28746001E288F /* CookBookDataManager.swift in Sources */,
-				BABD5F4620F23098001E288F /* Recipe.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

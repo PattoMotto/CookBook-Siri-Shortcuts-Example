@@ -20,7 +20,7 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OmH-if-hlE">
                                 <rect key="frame" x="172.5" y="328.5" width="30" height="30"/>
                                 <connections>
-                                    <action selector="addSiriShortcutDidTap:" destination="BYZ-38-t0r" eventType="touchUpInside" id="qaY-2K-6Tw"/>
+                                    <action selector="addEditSiriShortcutDidTap:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Xcg-EH-2Gg"/>
                                 </connections>
                             </button>
                         </subviews>

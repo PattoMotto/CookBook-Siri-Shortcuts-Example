@@ -1,6 +1,5 @@
 //Pat
 
-import Foundation
 import Intents
 
 final class VoiceShortcutManager {

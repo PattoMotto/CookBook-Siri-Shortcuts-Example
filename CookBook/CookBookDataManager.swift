@@ -1,5 +1,11 @@
 //Pat
 
+struct Recipe: Codable {
+    let identifier: String
+    let name: String
+    let instruction: [String]
+}
+
 protocol CookBookDataManager {
     func getRecipe(_ identifier: String) -> Recipe?
 }

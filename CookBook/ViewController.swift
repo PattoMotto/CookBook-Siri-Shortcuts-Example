@@ -8,16 +8,32 @@ class ViewController: UIViewController {
 
     @IBOutlet weak var addEditSiriShortcut: UIButton!
     private var shortcutManager: VoiceShortcutManager?
+    private var dataManager: CookBookDataManager?
     override func viewDidLoad() {
         super.viewDidLoad()
         shortcutManager = VoiceShortcutManager()
+        dataManager = CookBookDataManagerImpl()
         updateVoiceShortcuts()
     }
 
-    @IBAction func addSiriShortcutDidTap(_ sender: Any) {
-        guard let shortcutManager = shortcutManager else {return}
+    @IBAction func addEditSiriShortcutDidTap(_ sender: Any) {
+        presentVoiceShortcutViewController()
+    }
+
+    private func updateTitleForEdit() {
+        addEditSiriShortcut.setTitle("Edit Pad Thai shortcut", for: .normal)
+    }
+
+    private func updateTitleForAdd() {
+        addEditSiriShortcut.setTitle("Add Pad Thai shortcut", for: .normal)
+    }
+
+    private func presentVoiceShortcutViewController() {
+        guard let shortcutManager = shortcutManager,
+            let recipe = dataManager?.getRecipe("padthai") else {return}
         let cookBookIntent =  CookBookIntent()
-        cookBookIntent.recipe = INObject(identifier: "padthai", display: "Pad Thai")
+
+        cookBookIntent.recipe = INObject(identifier: recipe.identifier, display: recipe.name)
         guard let shortcut = INShortcut(intent:cookBookIntent) else {return}
         if let voiceShortcuts = shortcutManager.voiceShortcuts,
             let shortcut = voiceShortcuts.first {
@@ -31,21 +47,21 @@ class ViewController: UIViewController {
         }
     }
 
+    fileprivate func updateVoiceShortcuts() {
+        shortcutManager?.updateShortcut{ [weak self] in
+            self?.updateAddEditButton()
+        }
+    }
+
     private func updateAddEditButton() {
         DispatchQueue.main.async { [weak self] in
             guard let strongSelf = self else {return}
             if let voiceShortcuts = strongSelf.shortcutManager?.voiceShortcuts,
                 voiceShortcuts.first != nil {
-                strongSelf.addEditSiriShortcut.setTitle("Edit Pad Thai shortcut", for: .normal)
+                strongSelf.updateTitleForEdit()
             } else {
-                strongSelf.addEditSiriShortcut.setTitle("Add Pad Thai shortcut", for: .normal)
+                strongSelf.updateTitleForAdd()
             }
-        }
-    }
-
-    fileprivate func updateVoiceShortcuts() {
-        shortcutManager?.updateShortcut{ [weak self] in
-            self?.updateAddEditButton()
         }
     }
 }
